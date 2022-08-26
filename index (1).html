@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=" UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <title>project</title>
+
+
+</head>
+<body>
+<header>
+
+<h1><b>Sample Title</b></h1>
+<br>
+</header>
+<p id = "source">Access The Source Code <a href = "https://github.com/">here</a></p>
+<br>
+<label for="Team-select">Choose a Team</label>
+<br>
+<select id="teams">
+<option value="menu">--Please choose a team--</option>
+<option value="rm">Real Madrid</option>
+<option value="mu">Manchester United</option>
+<option value="bm">Bayern Munich</option>
+<br>
+</select>
+<br>
+<button onclick="displayImage()">Display Stats</button>
+<br>
+
+<img src = "" id = "pass" class="imgs">
+<br>
+<img src = "" id = "e2" class="imgs">
+<br>
+<img src = "" id = "e3" class="imgs">
+<br>
+<img src = "" id = "e4" class="imgs">
+<br>
+<img src = "" id = "e4" class="imgs">
+<br>
+
+</body>
+<script>
+
+  function displayImage(){
+    var teamName = document.getElementById("teams").value;
+    console.log(teamName);
+    
+    var img1 = document.getElementById("pass");
+    img1.src = `${teamName}.png`;
+    img1.alt = teamName;
+    
+    var img2 = document.getElementById("e2");
+    img2.src = `${teamName}2.jpg`;
+    img2.alt = teamName;
+
+    
+    var img3 = document.getElementById("e3");
+    img3.src = `${teamName}3.jpg`;
+    img3.alt = teamName;
+
+    
+    var img4 = document.getElementById("e4");
+    img4.src = `${teamName}4.jpg`;
+    img4.alt = teamName;
+
+    
+    var img5 = document.getElementById("e5");
+    img5.src = `${teamName}5.jpg`;
+    img5.alt = teamName;
+
+    
+
+
+
+  }
+
+
+</script>
+
+
+
+</html>
