@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=" UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <title>project</title>
+
+
+</head>
+<body>
+<header>
+
+<h1><b>Sample Title</b></h1>
+<br>
+</header>
+<p id = "source">Access The Source Code <a href = "https://github.com/">here</a></p>
+<br>
+<label for="Team-select">Choose a Team</label>
+<br>
+<select name="teams" id="Team-select">
+<option value="">--Please choose a team--</option>
+<option value="rm">Real Madrid</option>
+<option value="mu">Manchester United</option>
+<option value="bm">Bayern Munich</option>
+</select>
+<br>
+<button onclick="displayImage()">Display Stats</button>
+<img src="" alt = "gg ez" id = "shotsPercentage">
+</body>
+<script>
+
+  function displayImage(){
+    var teamName = document.getElementById("teams").value;
+    console.log(teamName)
+    var img = document.getElementById("shotsPercentage")
+    img.src = '${teamname}.jpg';
+    img.alt = teamName
+
+  }
+
+
+</script>
+
+
+
+</html>
