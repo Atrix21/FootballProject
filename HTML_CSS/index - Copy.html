@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset=" UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <title>project</title>
+  </head>
+  <body>
+    <header>
+      <h1><b>FootBall Stats</b></h1>
+      <br />
+    </header>
+    <p id="source">
+      Access The Source Code
+      <a href="https://github.com/Atrix21/FootballProject">here</a>
+    </p>
+    <br />
+    <label for="Team-select">Choose a Team</label>
+    <br />
+    <select id="teams">
+      <option value="menu">--Please choose a team--</option>
+      <option value="fr">France</option>
+      <option value="sp">Spain</option>
+      <option value="it">Italy</option>
+      <option value="eng">England</option>
+      <option value="denq">Denmark</option>
+      <br />
+    </select>
+    <select id="opp-teams">
+      <option value="menu">--Please choose the opposition--</option>
+      <option value="sl">Slovakia</option>
+      <option value="it">Italy</option>
+      <option value="sw">Sweden</option>
+      <option value="por">Portugal</option>
+      <option value="per">Peru</option>
+      <br />
+    </select>
+    <br />
+    <button onclick="displayImage()">Display Stats</button>
+    <br />
+    <h3>Team Lineup</h3>
+    <img src="" id="jer" class="imgs" />
+    <br/>
+    <h3>Passing Network Analysis</h3>
+    <img src="" id="pn" class="imgs" />
+    <br/>
+    <h3>Heat Map of Star Player</h3>
+    <img src="" id="hm" class="imgs" />
+    <br/>
+    <h3>Shot Map</h3>
+    <img src="" id="sm" class="imgs" />
+    <br/>
+  </body>
+  <script>
+    function displayImage() {
+      var teamName = document.getElementById("teams").value;
+      var oppName = document.getElementById("opp-teams").value;
+
+      var img1 = document.getElementById("pn");
+      img1.src = `images/${teamName}${oppName}pn.png`;
+      img1.alt = teamName;
+
+      var img2 = document.getElementById("jer");
+      img2.src = `images/${teamName}${oppName}jer.png`;
+      img2.alt = teamName;
+
+      var img3 = document.getElementById("hm");
+      img3.src = `images/${teamName}${oppName}hm.png`;
+      img3.alt = teamName;
+
+      var img4 = document.getElementById("sm");
+      img4.src = `images/${teamName}${oppName}sm.png`;
+      img4.alt = teamName;
+    }
+  </script>
+</html>
