@@ -47,6 +47,8 @@ p{
     width: 568px;
     height: 80%;
     position: fixed;
+    border-style: none;
+    display: none;
     
 }
 
@@ -56,6 +58,8 @@ p{
     width: 568px;
     height: 80%;
     position: fixed;
+    border-style: none;
+    display: none;
 }
 
 
