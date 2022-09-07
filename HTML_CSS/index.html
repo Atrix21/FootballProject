@@ -24,7 +24,7 @@
     <br />
     <select id="country" onchange="changeCountry()">
       <option value="menu" disabled selected>--Please choose a team--</option>
-      <option value="fr">France</option>
+      <option value="fra">France</option>
       <option value="spa">Spain</option>
       <option value="it">Italy</option>
       <option value="eng">England</option>
@@ -74,7 +74,7 @@
       img2.alt = teamName;
       
       var img3 = document.getElementById("pn");
-      img3.src = `images/${teamName}${oppName}pn.png`;
+      img3.src = `images/PassingNetwork/${teamName}${oppName}pn.png`;
       img3.alt = teamName;
 
       var img4 = document.getElementById("hm");
@@ -82,13 +82,13 @@
       img4.alt = teamName;
 
       var img5 = document.getElementById("sm");
-      img5.src = `images/${teamName}${oppName}sm.png`;
+      img5.src = `images/Shotmaps/${teamName}${oppName}sm.png`;
       img5.alt = teamName;
     }
 
     function changeCountry(){
       const teams = {
-        "fr" : [
+        "fra" : [
         {
           text : 'Portugal',
           value : 'por',
