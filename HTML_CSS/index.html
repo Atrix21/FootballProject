@@ -24,7 +24,7 @@
     <br />
     <select id="country" onchange="changeCountry()">
       <option value="menu" disabled selected>--Please choose a team--</option>
-      <option value="fr">France</option>
+      <option value="fra">France</option>
       <option value="spa">Spain</option>
       <option value="it">Italy</option>
       <option value="eng">England</option>
@@ -52,7 +52,7 @@
     <img src="" id="pn" class="imgs" />
     <br>
     <br>
-    <h3 class="visual-title">Heat Map of Star Player</h3>
+    <h3 class="visual-title">Heat Map of</h3>
     <img src="" id="hm" class="imgs" />
     <br>
     <br>
@@ -74,21 +74,21 @@
       img2.alt = teamName;
       
       var img3 = document.getElementById("pn");
-      img3.src = `images/${teamName}${oppName}pn.png`;
+      img3.src = `images/PassingNetwork/${teamName}${oppName}pn.png`;
       img3.alt = teamName;
 
       var img4 = document.getElementById("hm");
-      img4.src = `images/${teamName}${oppName}hm.png`;
+      img4.src = `images/HeatMaps/${teamName}${oppName}hm.png`;
       img4.alt = teamName;
 
       var img5 = document.getElementById("sm");
-      img5.src = `images/${teamName}${oppName}sm.png`;
+      img5.src = `images/Shotmaps/${teamName}${oppName}sm.png`;
       img5.alt = teamName;
     }
 
     function changeCountry(){
       const teams = {
-        "fr" : [
+        "fra" : [
         {
           text : 'Portugal',
           value : 'por',
@@ -185,7 +185,7 @@
         },
         {
           text : 'Switzerland',
-          value : 'switz',
+          value : 'swit',
         },
         {
           text : 'Croatia',
