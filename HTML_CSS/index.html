@@ -7,13 +7,19 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-    <link href="index.css" rel="stylesheet" />
+    <link href="./static/index.css" rel="stylesheet" />
     <title>Euro 2020 Stats Viewer</title>
   </head>
   <body>
     <header>
       <h1><b>Euro 2020 Stats Viewer</b></h1>
       <br />
+    <h3 class="visual-title1" >Team Lineup 1</h3>
+    <img src="" id="jer1" class="imgl" />
+    <h3 class="visual-title2">Team Lineup 2</h3>
+    <img src="" id="jer2" class="imgr" />
+    <br>
+    <br>
     </header>
     <p id="source">
       Access The Source Code
@@ -41,13 +47,6 @@
     <button onclick="displayImage()">Display Stats</button>
     <br>
     <br>
-    <h3 class="visual-title1" >Team Lineup 1</h3>
-    <img src="" id="jer1" class="imgl" />
-    
-    <h3 class="visual-title2">Team Lineup 2</h3>
-    <img src="" id="jer2" class="imgr" />
-    <br>
-    <br>
     <h3 class="visual-title">Passing Network Analysis</h3>
     <img src="" id="pn" class="imgs" />
     <br>
@@ -58,7 +57,7 @@
     <br>
     <h3 class="visual-title">Shot Map</h3>
     <img src="" id="sm" class="imgs" />
-    
+
   </body>
   <script>
     function displayImage() {
@@ -66,23 +65,23 @@
       var oppName = document.getElementById("oppTeam").value;
 
       var img1 = document.getElementById("jer1");
-      img1.src = `images/${teamName}${oppName}jer1.png`;
+      img1.src = `./static/images/lineups/${teamName}${oppName}jer1.png`;
       img1.alt = teamName;
-      
+
       var img2 = document.getElementById("jer2");
-      img2.src = `images/${teamName}${oppName}jer2.png`;
+      img2.src = `./static/images/lineups/${teamName}${oppName}jer2.png`;
       img2.alt = teamName;
-      
+
       var img3 = document.getElementById("pn");
-      img3.src = `images/PassingNetwork/${teamName}${oppName}pn.png`;
+      img3.src = `./static/images/PassingNetwork/${teamName}${oppName}pn.png`;
       img3.alt = teamName;
 
       var img4 = document.getElementById("hm");
-      img4.src = `images/HeatMaps/${teamName}${oppName}hm.png`;
+      img4.src = `./static/images/HeatMaps/${teamName}${oppName}hm.png`;
       img4.alt = teamName;
 
       var img5 = document.getElementById("sm");
-      img5.src = `images/Shotmaps/${teamName}${oppName}sm.png`;
+      img5.src = `./static/images/Shotmaps/${teamName}${oppName}sm.png`;
       img5.alt = teamName;
     }
 
@@ -236,6 +235,6 @@
       });
 
     }
-    
+
   </script>
 </html>
